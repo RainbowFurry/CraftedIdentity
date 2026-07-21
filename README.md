@@ -32,10 +32,10 @@ Ein modernes, anpassbares Minecraft-Profil-Plugin für Roleplay-Server und Commu
 # 🖼️ Gallery
 
 ## Hauptprofil-Menü
-
-## Socials-Menü
+<img width="1156" height="955" alt="image" src="https://github.com/user-attachments/assets/2dcfb81a-a716-4d98-aeb8-ef1b2a8923fe" />
 
 ## Config
+<img width="867" height="927" alt="image" src="https://github.com/user-attachments/assets/8b2ec81e-92c5-407f-8069-ac235126258c" />
 
 # 🚀 Installation
 
