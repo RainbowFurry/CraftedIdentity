@@ -19,10 +19,11 @@ public class MainProfileMenu {
     public void open(Player player) {
         PlayerProfile profile = plugin.getProfileManager().getProfile(player.getUniqueId());
         
-        String title = plugin.getConfig().getString("main-menu.title", "§8» §bDein Profil");
+        String title = plugin.getConfig().getString("main-menu.title", "<gradient:00FFFF,FF00FF>Dein Profil</gradient>");
+        String processedTitle = plugin.processGradients(title);
         int size = plugin.getConfig().getInt("main-menu.size", 54);
         
-        Inventory inv = Bukkit.createInventory(null, size, plugin.getLegacySerializer().deserialize(title));
+        Inventory inv = Bukkit.createInventory(null, size, plugin.getLegacySerializer().deserialize(processedTitle));
         
         // Füller Items
         ItemStack filler = createFillerItem("main-menu");
@@ -59,12 +60,22 @@ public class MainProfileMenu {
     private String getProfileValue(PlayerProfile profile, String key) {
         return switch (key) {
             case "realname" -> profile.getRealName().isEmpty() ? "§cNicht festgelegt" : profile.getRealName();
-            case "age" -> profile.getAge() == 0 ? "§cNicht festgelegt" : String.valueOf(profile.getAge());
+            case "age" -> {
+                if (profile.getBirthDate().isEmpty()) {
+                    yield "§cNicht festgelegt";
+                } else {
+                    yield profile.getAge() + " Jahre (" + profile.getBirthDate() + ")";
+                }
+            }
             case "gender" -> profile.getGender().isEmpty() ? "§cNicht festgelegt" : profile.getGender();
             case "sexuality" -> profile.getSexuality().isEmpty() ? "§cNicht festgelegt" : profile.getSexuality();
             case "description" -> profile.getDescription().isEmpty() ? "§cNicht festgelegt" : profile.getDescription();
             case "country" -> profile.getCountry().isEmpty() ? "§cNicht festgelegt" : profile.getCountry();
             case "languages" -> profile.getLanguages().isEmpty() ? "§cNicht festgelegt" : String.join(", ", profile.getLanguages());
+            case "friends" -> profile.getFriends().size() + " Freund" + (profile.getFriends().size() == 1 ? "" : "e");
+            case "pronouns" -> profile.getPronouns().isEmpty() ? "§cNicht festgelegt" : profile.getPronouns();
+            case "playtime" -> profile.getFormattedPlaytime();
+            case "status" -> profile.getStatus().isEmpty() ? "§cKein Status gesetzt" : profile.getStatus();
             default -> "§cN/A";
         };
     }

@@ -18,10 +18,11 @@ public class SexualitySelectionMenu {
     }
 
     public void open(Player player) {
-        String title = plugin.getConfig().getString("sexuality-menu.title", "§8» §bSexualität wählen");
+        String title = plugin.getConfig().getString("sexuality-menu.title", "<gradient:FF0000,FFFF00>Sexualität wählen</gradient>");
+        String processedTitle = plugin.processGradients(title);
         int size = plugin.getConfig().getInt("sexuality-menu.size", 27);
         
-        Inventory inv = Bukkit.createInventory(null, size, plugin.getLegacySerializer().deserialize(title));
+        Inventory inv = Bukkit.createInventory(null, size, plugin.getLegacySerializer().deserialize(processedTitle));
         
         // Füller Items
         ItemStack filler = createFillerItem("sexuality-menu");
@@ -39,7 +40,8 @@ public class SexualitySelectionMenu {
                 ConfigurationSection optionSection = optionsSection.getConfigurationSection(key);
                 if (optionSection == null) continue;
                 
-                ItemStack item = plugin.createConfigSkullItem(optionSection, "§6" + key, "");
+                String name = optionSection.getString("name", key);
+                ItemStack item = plugin.createConfigSkullItem(optionSection, name, "");
                 inv.setItem(slot, item);
             }
         }

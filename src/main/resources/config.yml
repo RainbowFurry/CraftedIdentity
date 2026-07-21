@@ -4,7 +4,7 @@
 # Hauptmenü (Dein Profil) Einstellungen
 # ==============================================
 main-menu:
-  title: "§8» §bDein Profil"
+  title: "<gradient:00FFFF,FF00FF>Dein Profil</gradient>"
   size: 54
   filler-item:
     material: GRAY_STAINED_GLASS_PANE
@@ -14,65 +14,91 @@ main-menu:
     realname:
       slot: 10
       material: NAME_TAG
-      name: "§6Echter Name"
+      name: "<gradient:FFFF00,FFAA00>Echter Name</gradient>"
       lore:
         - "§7Aktuell: §a%value%"
         - "§7Klicke, um zu ändern"
     age:
       slot: 12
       material: CLOCK
-      name: "§6Alter"
+      name: "<gradient:FFAA00,FFFF00>Alter & Geburtsdatum</gradient>"
       lore:
         - "§7Aktuell: §a%value%"
-        - "§7Klicke, um zu ändern"
+        - "§7Klicke, um das Geburtsdatum zu ändern"
     gender:
       slot: 14
       material: PINK_DYE
-      name: "§6Geschlecht"
+      name: "<gradient:FF00FF,800080>Geschlecht</gradient>"
       lore:
         - "§7Aktuell: §a%value%"
         - "§7Klicke, um zu ändern"
     sexuality:
       slot: 16
       material: HEART_OF_THE_SEA
-      name: "§6Sexualität"
+      name: "<gradient:FF0000,FFFF00>Sexualität</gradient>"
       lore:
         - "§7Aktuell: §a%value%"
         - "§7Klicke, um zu ändern"
     description:
       slot: 28
       material: WRITABLE_BOOK
-      name: "§6Beschreibung"
+      name: "<gradient:00FF00,00AA00>Beschreibung</gradient>"
       lore:
         - "§7Aktuell: §a%value%"
         - "§7Klicke, um zu ändern"
     socials:
       slot: 30
       material: TOTEM_OF_UNDYING
-      name: "§6Socials"
+      name: "<gradient:0000FF,00FFFF>Socials</gradient>"
       lore:
         - "§7Klicke, um Socials zu verwalten"
     country:
       slot: 32
       material: GRASS_BLOCK
-      name: "§6Land"
+      name: "<gradient:00AA00,00FF00>Land</gradient>"
       lore:
         - "§7Aktuell: §a%value%"
         - "§7Klicke, um dein Land festzulegen"
     languages:
       slot: 34
       material: BOOK
-      name: "§6Sprachen"
+      name: "<gradient:FFFF00,FF5555>Sprachen</gradient>"
       lore:
         - "§7Aktuell: §a%value%"
         - "§7Klicke, um Sprachen hinzuzufügen"
+    friends:
+      slot: 36
+      material: PLAYER_HEAD
+      name: "<gradient:00FF00,00FFFF>Freunde</gradient>"
+      lore:
+        - "§7Klicke, um Freunde zu verwalten"
+    pronouns:
+      slot: 38
+      material: NAME_TAG
+      name: "<gradient:FF69B4,FF1493>Pronomen</gradient>"
+      lore:
+        - "§7Aktuell: §a%value%"
+        - "§7Klicke, um zu ändern"
+    playtime:
+      slot: 40
+      material: CLOCK
+      name: "<gradient:FFD700,FFA500>Spielzeit</gradient>"
+      lore:
+        - "§7Gesamt: §a%value%"
+    status:
+      slot: 42
+      material: OAK_SIGN
+      name: "<gradient:00CED1,20B2AA>Status</gradient>"
+      lore:
+        - "§7Aktuell: §a%value%"
+        - "§7Klicke, um zu ändern"
 
 
 # ==============================================
 # Socials Menü Einstellungen (erweiterbar!)
 # ==============================================
 socials-menu:
-  title: "§8» §bSocials"
+  title: "<gradient:0000FF,00FFFF>Socials</gradient>"
   size: 54
   filler-item:
     material: GRAY_STAINED_GLASS_PANE
@@ -81,42 +107,42 @@ socials-menu:
   back-item:
     slot: 45
     material: ARROW
-    name: "§cZurück"
+    name: "<gradient:FF0000,FFFF00>Zurück</gradient>"
     lore:
       - "§7Zurück zum Hauptmenü"
   # Hier kannst du UNENDLICH viele Socials hinzufügen!
   platforms:
     discord:
       slot: 10
-      name: "§9Discord"
+      name: "<gradient:5865F2,7289DA>Discord</gradient>"
       head: "MHF_Discord" # MHF_Pig (neutral) oder beliebiger Spielername
       lore:
         - "§7Aktuell: §a%value%"
         - "§7Klicke, um zu ändern"
     twitter:
       slot: 12
-      name: "§bTwitter/X"
+      name: "<gradient:1DA1F2,0F1419>Twitter/X</gradient>"
       head: "MHF_Twitter"
       lore:
         - "§7Aktuell: §a%value%"
         - "§7Klicke, um zu ändern"
     instagram:
       slot: 14
-      name: "§dInstagram"
+      name: "<gradient:E4405F,C13584>Instagram</gradient>"
       head: "MHF_Instagram"
       lore:
         - "§7Aktuell: §a%value%"
         - "§7Klicke, um zu ändern"
     twitch:
       slot: 16
-      name: "§5Twitch"
+      name: "<gradient:9146FF,772CE8>Twitch</gradient>"
       head: "MHF_Twitch"
       lore:
         - "§7Aktuell: §a%value%"
         - "§7Klicke, um zu ändern"
     youtube:
       slot: 18
-      name: "§cYouTube"
+      name: "<gradient:FF0000,FF5500>YouTube</gradient>"
       head: "MHF_YouTube"
       lore:
         - "§7Aktuell: §a%value%"
@@ -127,7 +153,7 @@ socials-menu:
 # Geschlecht Menü Einstellungen
 # ==============================================
 gender-menu:
-  title: "§8» §bGeschlecht wählen"
+  title: "<gradient:FF00FF,800080>Geschlecht wählen</gradient>"
   size: 27
   filler-item:
     material: GRAY_STAINED_GLASS_PANE
@@ -137,23 +163,29 @@ gender-menu:
   options:
     Mann:
       material: BLUE_WOOL
+      name: "<gradient:0066FF,00CCFF>Mann</gradient>"
     Frau:
       material: PINK_WOOL
+      name: "<gradient:FF66B2,FF99CC>Frau</gradient>"
     Divers:
       material: PURPLE_WOOL
+      name: "<gradient:9933FF,CC66FF>Divers</gradient>"
     Trans Mann:
       material: LIGHT_BLUE_WOOL
+      name: "<gradient:0066FF,00CCFF>Trans Mann</gradient>"
     Trans Frau:
       material: MAGENTA_WOOL
+      name: "<gradient:FF33CC,FF66B2>Trans Frau</gradient>"
     Non-Binary:
       material: YELLOW_WOOL
+      name: "<gradient:FFFF66,FFFF00>Non-Binary</gradient>"
 
 
 # ==============================================
 # Sexualität Menü Einstellungen (mit Köpfen!)
 # ==============================================
 sexuality-menu:
-  title: "§8» §bSexualität wählen"
+  title: "<gradient:FF0000,FFFF00>Sexualität wählen</gradient>"
   size: 27
   filler-item:
     material: GRAY_STAINED_GLASS_PANE
@@ -162,27 +194,58 @@ sexuality-menu:
   options:
     Heterosexuell:
       head: "MHF_Steve"
+      name: "<gradient:0066FF,00CCFF>Heterosexuell</gradient>"
     Homosexuell:
       head: "MHF_Alex"
+      name: "<gradient:FF0066,FF66CC>Homosexuell</gradient>"
     Bisexuell:
       head: "MHF_Pig"
+      name: "<gradient:FF0066,9933FF>Bisexuell</gradient>"
     Pansexuell:
       head: "MHF_Sheep"
+      name: "<gradient:FFFF00,FF66FF>Pansexuell</gradient>"
     Asexuell:
       head: "MHF_Blaze"
+      name: "<gradient:888888,AAAAAA>Asexuell</gradient>"
     Queer:
       head: "MHF_Chicken"
+      name: "<gradient:00FF00,FF00FF>Queer</gradient>"
     "Keine Angabe":
       head: "MHF_Golem"
+      name: "<gradient:888888,FFFFFF>Keine Angabe</gradient>"
 
 
 # ==============================================
 # Profil Anzeige Menü (fremdes Profil)
 # ==============================================
 view-profile-menu:
-  title: "§8» §bProfil von %player%"
+  title: "<gradient:00FFFF,FFFFFF>Profil von %player%</gradient>"
   size: 54
   filler-item:
     material: GRAY_STAINED_GLASS_PANE
     name: "§r"
     lore: []
+
+
+# ==============================================
+# Freunde Menü Einstellungen
+# ==============================================
+friends-menu:
+  title: "<gradient:00FF00,00FFFF>Freunde</gradient>"
+  size: 54
+  filler-item:
+    material: GRAY_STAINED_GLASS_PANE
+    name: "§r"
+    lore: []
+  back-item:
+    slot: 45
+    material: ARROW
+    name: "<gradient:FF0000,FFFF00>Zurück</gradient>"
+    lore:
+      - "§7Zurück zum Hauptmenü"
+  add-friend-item:
+    slot: 49
+    material: LIME_DYE
+    name: "<gradient:00FF00,00AA00>Freund hinzufügen</gradient>"
+    lore:
+      - "§7Klicke, um einen Freund hinzuzufügen"

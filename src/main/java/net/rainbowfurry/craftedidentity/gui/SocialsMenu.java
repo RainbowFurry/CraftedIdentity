@@ -19,10 +19,11 @@ public class SocialsMenu {
     public void open(Player player) {
         PlayerProfile profile = plugin.getProfileManager().getProfile(player.getUniqueId());
         
-        String title = plugin.getConfig().getString("socials-menu.title", "§8» §bSocials");
+        String title = plugin.getConfig().getString("socials-menu.title", "<gradient:0000FF,00FFFF>Socials</gradient>");
+        String processedTitle = plugin.processGradients(title);
         int size = plugin.getConfig().getInt("socials-menu.size", 54);
         
-        Inventory inv = Bukkit.createInventory(null, size, plugin.getLegacySerializer().deserialize(title));
+        Inventory inv = Bukkit.createInventory(null, size, plugin.getLegacySerializer().deserialize(processedTitle));
         
         // Füller Items
         ItemStack filler = createFillerItem("socials-menu");

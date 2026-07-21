@@ -22,10 +22,11 @@ public class GenderSelectionMenu {
     }
 
     public void open(Player player) {
-        String title = plugin.getConfig().getString("gender-menu.title", "§8» §bGeschlecht wählen");
+        String title = plugin.getConfig().getString("gender-menu.title", "<gradient:FF00FF,800080>Geschlecht wählen</gradient>");
+        String processedTitle = plugin.processGradients(title);
         int size = plugin.getConfig().getInt("gender-menu.size", 27);
         
-        Inventory inv = Bukkit.createInventory(null, size, plugin.getLegacySerializer().deserialize(title));
+        Inventory inv = Bukkit.createInventory(null, size, plugin.getLegacySerializer().deserialize(processedTitle));
         
         // Füller Items
         ItemStack filler = createFillerItem("gender-menu");
@@ -48,7 +49,9 @@ public class GenderSelectionMenu {
                 ItemMeta meta = item.getItemMeta();
                 
                 if (meta != null) {
-                    meta.displayName(plugin.getLegacySerializer().deserialize("§6" + key));
+                    String name = optionSection.getString("name", key);
+                    String processedName = plugin.processGradients(name);
+                    meta.displayName(plugin.getLegacySerializer().deserialize(processedName));
                     meta.lore(List.of(plugin.getLegacySerializer().deserialize("§7Klicke, um auszuwählen")));
                     item.setItemMeta(meta);
                 }

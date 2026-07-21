@@ -1,3 +1,10 @@
+Update:
+clean display on skull all infos at once.
+Freunde?
+Führerschein
+Personalausweis
+...
+
 ### 1. CraftedIdentity
 Warum gut?
  Kombiniert "Craft" (Minecraft-Referenz) und "Identity" (Persönlichkeit/Profil) – klingt modern und betont die eigene Gestaltung des Profils!
