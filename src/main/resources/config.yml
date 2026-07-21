@@ -1,0 +1,188 @@
+# Social Profile Plugin Config - Fully Customizable!
+
+# ==============================================
+# Hauptmenü (Dein Profil) Einstellungen
+# ==============================================
+main-menu:
+  title: "§8» §bDein Profil"
+  size: 54
+  filler-item:
+    material: GRAY_STAINED_GLASS_PANE
+    name: "§r"
+    lore: []
+  items:
+    realname:
+      slot: 10
+      material: NAME_TAG
+      name: "§6Echter Name"
+      lore:
+        - "§7Aktuell: §a%value%"
+        - "§7Klicke, um zu ändern"
+    age:
+      slot: 12
+      material: CLOCK
+      name: "§6Alter"
+      lore:
+        - "§7Aktuell: §a%value%"
+        - "§7Klicke, um zu ändern"
+    gender:
+      slot: 14
+      material: PINK_DYE
+      name: "§6Geschlecht"
+      lore:
+        - "§7Aktuell: §a%value%"
+        - "§7Klicke, um zu ändern"
+    sexuality:
+      slot: 16
+      material: HEART_OF_THE_SEA
+      name: "§6Sexualität"
+      lore:
+        - "§7Aktuell: §a%value%"
+        - "§7Klicke, um zu ändern"
+    description:
+      slot: 28
+      material: WRITABLE_BOOK
+      name: "§6Beschreibung"
+      lore:
+        - "§7Aktuell: §a%value%"
+        - "§7Klicke, um zu ändern"
+    socials:
+      slot: 30
+      material: TOTEM_OF_UNDYING
+      name: "§6Socials"
+      lore:
+        - "§7Klicke, um Socials zu verwalten"
+    country:
+      slot: 32
+      material: GRASS_BLOCK
+      name: "§6Land"
+      lore:
+        - "§7Aktuell: §a%value%"
+        - "§7Klicke, um dein Land festzulegen"
+    languages:
+      slot: 34
+      material: BOOK
+      name: "§6Sprachen"
+      lore:
+        - "§7Aktuell: §a%value%"
+        - "§7Klicke, um Sprachen hinzuzufügen"
+
+
+# ==============================================
+# Socials Menü Einstellungen (erweiterbar!)
+# ==============================================
+socials-menu:
+  title: "§8» §bSocials"
+  size: 54
+  filler-item:
+    material: GRAY_STAINED_GLASS_PANE
+    name: "§r"
+    lore: []
+  back-item:
+    slot: 45
+    material: ARROW
+    name: "§cZurück"
+    lore:
+      - "§7Zurück zum Hauptmenü"
+  # Hier kannst du UNENDLICH viele Socials hinzufügen!
+  platforms:
+    discord:
+      slot: 10
+      name: "§9Discord"
+      head: "MHF_Discord" # MHF_Pig (neutral) oder beliebiger Spielername
+      lore:
+        - "§7Aktuell: §a%value%"
+        - "§7Klicke, um zu ändern"
+    twitter:
+      slot: 12
+      name: "§bTwitter/X"
+      head: "MHF_Twitter"
+      lore:
+        - "§7Aktuell: §a%value%"
+        - "§7Klicke, um zu ändern"
+    instagram:
+      slot: 14
+      name: "§dInstagram"
+      head: "MHF_Instagram"
+      lore:
+        - "§7Aktuell: §a%value%"
+        - "§7Klicke, um zu ändern"
+    twitch:
+      slot: 16
+      name: "§5Twitch"
+      head: "MHF_Twitch"
+      lore:
+        - "§7Aktuell: §a%value%"
+        - "§7Klicke, um zu ändern"
+    youtube:
+      slot: 18
+      name: "§cYouTube"
+      head: "MHF_YouTube"
+      lore:
+        - "§7Aktuell: §a%value%"
+        - "§7Klicke, um zu ändern"
+
+
+# ==============================================
+# Geschlecht Menü Einstellungen
+# ==============================================
+gender-menu:
+  title: "§8» §bGeschlecht wählen"
+  size: 27
+  filler-item:
+    material: GRAY_STAINED_GLASS_PANE
+    name: "§r"
+    lore: []
+  # Materialien sind entweder Wools oder Farbstoffe!
+  options:
+    Mann:
+      material: BLUE_WOOL
+    Frau:
+      material: PINK_WOOL
+    Divers:
+      material: PURPLE_WOOL
+    Trans Mann:
+      material: LIGHT_BLUE_WOOL
+    Trans Frau:
+      material: MAGENTA_WOOL
+    Non-Binary:
+      material: YELLOW_WOOL
+
+
+# ==============================================
+# Sexualität Menü Einstellungen (mit Köpfen!)
+# ==============================================
+sexuality-menu:
+  title: "§8» §bSexualität wählen"
+  size: 27
+  filler-item:
+    material: GRAY_STAINED_GLASS_PANE
+    name: "§r"
+    lore: []
+  options:
+    Heterosexuell:
+      head: "MHF_Steve"
+    Homosexuell:
+      head: "MHF_Alex"
+    Bisexuell:
+      head: "MHF_Pig"
+    Pansexuell:
+      head: "MHF_Sheep"
+    Asexuell:
+      head: "MHF_Blaze"
+    Queer:
+      head: "MHF_Chicken"
+    "Keine Angabe":
+      head: "MHF_Golem"
+
+
+# ==============================================
+# Profil Anzeige Menü (fremdes Profil)
+# ==============================================
+view-profile-menu:
+  title: "§8» §bProfil von %player%"
+  size: 54
+  filler-item:
+    material: GRAY_STAINED_GLASS_PANE
+    name: "§r"
+    lore: []

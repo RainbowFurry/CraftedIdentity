@@ -1,0 +1,14 @@
+name: CraftedIdentity
+version: '1.0'
+main: net.rainbowfurry.craftedidentity.CraftedIdentity
+api-version: '1.21'
+prefix: CraftedIdentity
+authors: [ RainbowFurry ]
+description: Ein modernes, anpassbares Minecraft-Profil-Plugin für Roleplay-Server und Community-SMPs!
+website: https://www.rainbowfurry.com
+
+commands:
+  profile:
+    description: Öffne dein Profil-Menü
+    usage: /profile
+    aliases: [profil]
